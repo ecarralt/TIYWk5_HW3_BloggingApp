@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<%= link_to 'Home', posts_path %>
+
+<% if notice.present? %>
+<div class="notice">
+    <p>
+      <%= notice %>
+    </p>
+</div>
+<% end %>
+
 <%= yield %>
 
 </body>
