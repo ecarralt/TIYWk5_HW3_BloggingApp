@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     @post.title = params[:post][:title]
     @post.body = params[:post][:body]
     if @post.save # checks .valid? first
-      redirect_to show_path id: params[:id], notice: "Your post has been edited!"
+      redirect_to show_path(id: params[:id]), notice: "Your post has been edited!"
     else
       render :edit
     end
