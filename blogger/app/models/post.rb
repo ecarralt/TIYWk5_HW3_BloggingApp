@@ -1,4 +1,13 @@
 class Post < ActiveRecord::Base
   # auto linked to posts table
-  validates :title presence: true, :body
+
+  # attr_accessor :id, :title, :body
+
+    # def initialize(id, title, body)
+    #   @id = id
+    #   @title = title
+    #   @artist_id = body
+    # end
+
+   validates :title, presence: true
 end
