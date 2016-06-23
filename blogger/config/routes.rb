@@ -2,8 +2,12 @@ Rails.application.routes.draw do
 
   get '/' => 'posts#index', as: :posts
   get 'posts/new' => 'posts#new', as: :new_post
-  get 'posts/:id' => 'posts#show', as: :post
-  post 'posts' => 'posts#create'
+  get 'posts/:id' => 'posts#show', as: :show
+  post 'posts' => 'posts#create', as: :create_post
+  get '/posts/:id/edit' => 'posts#edit', as: :edit_post
+  patch '/posts/:id' => 'posts#update', as: :update_post
+
+
 
 
 

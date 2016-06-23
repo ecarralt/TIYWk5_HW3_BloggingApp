@@ -1,7 +1,18 @@
+<%= link_to 'All Blog Posts', posts_path %>
+
+
 
 <h1><%= @post.title %></h1>
 
 <p><%= @post.body %></p>
 
+<div>
 
+<%= link_to "Edit", edit_post_path%>
+</div>
+
+
+
+<div class= "go_back">
 <%= link_to "<< Back", :back %>
+</div>

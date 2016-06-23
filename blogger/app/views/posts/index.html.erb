@@ -1,8 +1,12 @@
 <h1>Today's Posts</h1>
 
+<%= link_to 'New Blog Post', new_post_path %>
 
-<ul>
+
+
+<div>
   <% @posts.each do |post| %>
-    <li><%= link_to post.title, post_path(id: post.id)%></li>
+    <h2><%= link_to post.title, show_path(id: post.id) %></h2>
+    <p><%= post.body%></p>
   <% end %>
-</ul>
+</div>

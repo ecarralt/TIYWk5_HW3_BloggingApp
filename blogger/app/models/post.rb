@@ -10,4 +10,6 @@ class Post < ActiveRecord::Base
     # end
 
    validates :title, presence: true
+   validates :body, presence: true
+
 end

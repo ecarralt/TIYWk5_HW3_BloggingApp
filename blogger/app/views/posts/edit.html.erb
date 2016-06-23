@@ -1,0 +1,35 @@
+<h1>Editing this post: <%= @post.title %></h1>
+
+<%if false%>
+<!-- <% if @error_message %>
+  <div class="error">
+    <%= @error_message %>
+  </div>
+<% end %> -->
+
+<!-- <%= form_tag artist_path(id: @artist.id), method: :patch do %>
+  <div class="">
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @artist.name, class: "field", placeholder: 'New Artist Name' %>
+  </div>
+
+  <%= submit_tag %>
+<% end %> -->
+
+<%end%>
+
+
+<%= form_for(@post, url: update_post_path) do |f|%>
+  <div class="edit_title_input">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="edit_body_input">
+    <%= f.label :body %>
+    <%= f.text_field :body %>
+  </div>
+
+
+  <%= f.submit %>
+<% end %>
